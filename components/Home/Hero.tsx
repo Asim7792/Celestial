@@ -1,10 +1,9 @@
 import React from "react";
-import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black font-sans text-white">
-      {/* Background with Solar-themed Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
         style={{
@@ -14,18 +13,12 @@ const Hero = () => {
       />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-[1400px] flex-col justify-end px-6 pb-20 md:px-12">
-        {/* Main Heading Section */}
         <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-12">
           <div className="lg:col-span-9">
             <h1 className="flex flex-col text-[60px] font-bold leading-[0.9] tracking-tighter md:text-[100px]">
               <span>Find Your</span>
               <span className="text-neutral-200">Powered</span>
-              <span className="flex items-center gap-6">
-                Solar Energy
-                {/* <button className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black md:h-20 md:w-20">
-                   <ArrowDown className="h-6 w-6 md:h-10 md:w-10" />
-                </button> */}
-              </span>
+              <span className="flex items-center gap-6">Solar Energy</span>
             </h1>
 
             <p className="mt-10 max-w-lg text-lg leading-relaxed text-neutral-400">
@@ -56,7 +49,6 @@ const Hero = () => {
               </a>
             </div>
 
-            {/* Trust Badges */}
             <div className="mt-12 flex flex-wrap items-center gap-6 text-sm">
               <div className="flex items-center gap-2">
                 <div
@@ -95,7 +87,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Overlapping Glass Card */}
           <div className="relative lg:col-span-3">
             <div className="right-[-5%] z-20 mt-12 w-full rounded-[40px] border border-white/10 bg-neutral-900/80 p-10 shadow-2xl backdrop-blur-2xl lg:absolute lg:bottom-[-20px] lg:mt-0 lg:w-[380px]">
               <h2 className="text-6xl font-bold tracking-tighter">500+</h2>
@@ -124,16 +115,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Brand Watermark / Bottom Logo */}
-      {/* <div className="absolute bottom-8 left-8 flex items-center gap-2 rounded-full border border-white/20 bg-black/40 p-2 pr-4 backdrop-blur-md">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-[10px] font-black text-black">
-          C
-        </div>
-        <span className="text-[10px] font-bold uppercase tracking-[0.2em]">
-          Celestial
-        </span>
-      </div> */}
     </section>
   );
 };

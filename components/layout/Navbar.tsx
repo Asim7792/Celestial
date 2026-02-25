@@ -1,32 +1,30 @@
 "use client";
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Sun } from 'lucide-react';
+import React, { useState } from "react";
+import Link from "next/link";
+import { Menu, X, Phone, Sun } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { 
-      name: 'Projects', 
-      href: '#',
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    {
+      name: "Projects",
+      href: "#",
       subLinks: [
-        { name: 'Residential Projects', href: '/residential-projects' },
-        { name: 'Commercial Projects', href: '/commercial-projects' }
-      ]
+        { name: "Residential Projects", href: "/residential-projects" },
+        { name: "Commercial Projects", href: "/commercial-projects" },
+      ],
     },
-    { name: 'Services', href: '/services' },
-    { name: 'Contact', href: '/contact-us' }
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact-us" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-neutral-200 shadow-sm">
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] group-hover:bg-[#0F82BA] transition-colors">
               <Sun className="text-black" size={24} />
@@ -35,22 +33,22 @@ const Navbar = () => {
               <h1 className="text-xl font-black tracking-tight text-neutral-900 leading-tight">
                 Celestial Energy
               </h1>
-              <p className="text-[10px] text-neutral-500 uppercase tracking-widest">Solar Solutions</p>
+              <p className="text-[10px] text-neutral-500 uppercase tracking-widest">
+                Solar Solutions
+              </p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group">
-                <Link 
+                <Link
                   href={link.href}
                   className="text-sm font-medium text-neutral-700 hover:text-[#1092CF] transition-colors uppercase tracking-wider"
                 >
                   {link.name}
                 </Link>
-                
-                {/* Dropdown for Projects */}
+
                 {link.subLinks && (
                   <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-neutral-200 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     {link.subLinks.map((subLink) => (
@@ -68,7 +66,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex items-center gap-2 text-sm text-neutral-600">
               <Phone size={16} className="text-[#1092CF]" />
@@ -81,7 +78,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-neutral-100 transition-colors"
@@ -90,7 +86,6 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden py-6 border-t border-neutral-200">
             {navLinks.map((link) => (

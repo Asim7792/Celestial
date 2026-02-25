@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -10,7 +10,7 @@ const testimonials = [
     location: "Lahore",
     rating: 5,
     text: "From concept to reality, the Celestial Energy team turned my vision into a stunning, livable solar-powered home. I couldn't be happier with the results!",
-    image: "https://i.pravatar.cc/150?img=12"
+    image: "https://i.pravatar.cc/150?img=12",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const testimonials = [
     location: "Karachi",
     rating: 5,
     text: "Absolutely love my new solar system! The installation was professional and the energy savings are incredible. Best investment we've made.",
-    image: "https://i.pravatar.cc/150?img=45"
+    image: "https://i.pravatar.cc/150?img=45",
   },
   {
     id: 3,
@@ -26,8 +26,8 @@ const testimonials = [
     location: "Islamabad",
     rating: 5,
     text: "The team's expertise and attention to detail was exceptional. Our commercial facility is now 100% solar-powered and saving thousands monthly.",
-    image: "https://i.pravatar.cc/150?img=33"
-  }
+    image: "https://i.pravatar.cc/150?img=33",
+  },
 ];
 
 const AboutTestimonials = () => {
@@ -38,7 +38,9 @@ const AboutTestimonials = () => {
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
+    );
   };
 
   const currentTestimonial = testimonials[currentIndex];
@@ -46,21 +48,19 @@ const AboutTestimonials = () => {
   return (
     <section className="bg-[#F9F9F9] py-24 px-6 md:px-12">
       <div className="max-w-[1400px] mx-auto">
-        
-        {/* Header */}
         <div className="text-center mb-16">
           <span className="inline-block border border-neutral-300 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-6">
             • Our Clients Say
           </span>
           <h2 className="text-[40px] md:text-[55px] font-bold leading-[1.1] tracking-tighter">
-            Here's What <span className="text-[#1092CF] font-medium">Warm Words</span> <br />
+            Here&apos;s What{" "}
+            <span className="text-[#1092CF] font-medium">Warm Words</span>{" "}
+            <br />
             Our Clients Say
           </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          {/* Left: Rating Stats */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -73,16 +73,20 @@ const AboutTestimonials = () => {
               </div>
               <div className="flex justify-center lg:justify-start gap-1 mb-3">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} size={20} className="fill-[#1092CF] text-[#1092CF]" />
+                  <Star
+                    key={star}
+                    size={20}
+                    className="fill-[#1092CF] text-[#1092CF]"
+                  />
                 ))}
               </div>
               <p className="text-sm text-neutral-500 font-medium">
-                Based on <span className="font-bold text-neutral-900">500+ reviews</span>
+                Based on{" "}
+                <span className="font-bold text-neutral-900">500+ reviews</span>
               </p>
             </div>
           </motion.div>
 
-          {/* Right: Testimonial Carousel */}
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
@@ -93,33 +97,40 @@ const AboutTestimonials = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-[40px] p-10 shadow-xl border border-neutral-100"
               >
-                {/* Quote */}
                 <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-8 italic">
-                  "{currentTestimonial.text}"
+                  {currentTestimonial.text}
                 </p>
 
-                {/* Client Info */}
                 <div className="flex items-center gap-4">
-                  <img 
+                  <img
                     src={currentTestimonial.image}
                     alt={currentTestimonial.name}
                     className="w-16 h-16 rounded-full object-cover border-4 border-neutral-100"
                   />
                   <div>
-                    <h4 className="font-bold text-neutral-900">{currentTestimonial.name}</h4>
-                    <p className="text-sm text-neutral-500">{currentTestimonial.location}</p>
+                    <h4 className="font-bold text-neutral-900">
+                      {currentTestimonial.name}
+                    </h4>
+                    <p className="text-sm text-neutral-500">
+                      {currentTestimonial.location}
+                    </p>
                   </div>
-                  
+
                   <div className="ml-auto flex gap-1">
-                    {Array.from({ length: currentTestimonial.rating }).map((_, i) => (
-                      <Star key={i} size={16} className="fill-[#1092CF] text-[#1092CF]" />
-                    ))}
+                    {Array.from({ length: currentTestimonial.rating }).map(
+                      (_, i) => (
+                        <Star
+                          key={i}
+                          size={16}
+                          className="fill-[#1092CF] text-[#1092CF]"
+                        />
+                      ),
+                    )}
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
 
-            {/* Navigation Buttons */}
             <div className="flex justify-center gap-4 mt-8">
               <button
                 onClick={prevTestimonial}
@@ -135,7 +146,6 @@ const AboutTestimonials = () => {
               </button>
             </div>
           </div>
-
         </div>
       </div>
     </section>

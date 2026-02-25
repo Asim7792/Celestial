@@ -1,4 +1,4 @@
-// Residential Projects Data
+
 export interface Project {
   id: number;
   title: string;

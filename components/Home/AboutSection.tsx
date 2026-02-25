@@ -29,7 +29,6 @@ const About = () => {
   return (
     <section className="bg-[#FCFCFC] py-24 px-6 md:px-12 text-neutral-900 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
-        {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -55,7 +54,7 @@ const About = () => {
             className="lg:w-1/3 lg:mt-20"
           >
             <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
-              As Pakistan's leading solar energy provider, we specialize in
+              As Pakistan&apos;s leading solar energy provider, we specialize in
               designing and installing high-efficiency solar power systems for
               homes, businesses, and industries. With over 500+ successful
               installations and 6+ years of expertise, we transform sustainable
@@ -64,7 +63,6 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
@@ -76,7 +74,6 @@ const About = () => {
               whileHover={{ y: -10 }}
               className="group relative bg-white p-8 rounded-[40px] border border-neutral-100 shadow-sm hover:shadow-xl hover:shadow-neutral-200/50 transition-all duration-500 flex flex-col"
             >
-              {/* Header Area */}
               <div className="flex justify-between items-start mb-6">
                 <h3 className="text-2xl font-bold tracking-tight leading-tight text-neutral-900">
                   {service.title}
@@ -86,20 +83,17 @@ const About = () => {
                 </span>
               </div>
 
-              {/* Description - Always Visible for SEO */}
               <div className="flex-1">
                 <p className="text-neutral-600 text-sm leading-relaxed mb-6">
                   {service.desc}
                 </p>
               </div>
 
-              {/* Bottom underline indicator */}
               <div
                 className="h-1 w-0 group-hover:w-full transition-all duration-500 rounded-full"
                 style={{ backgroundColor: "#1092CF" }}
               />
 
-              {/* Background watermark icon (like in your screenshot) */}
               <div className="absolute right-6 top-1/2 -translate-y-1/2 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
                 <div className="w-32 h-32 border-4 border-neutral-900 rounded-full flex items-center justify-center">
                   <div className="w-16 h-16 border-4 border-neutral-900 rounded-bl-full" />

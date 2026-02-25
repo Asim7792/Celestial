@@ -29,7 +29,6 @@ export default function ContactPage() {
 
   return (
     <div className="font-sans bg-white">
-      {/* Hero Section */}
       <section className="relative min-h-[40vh] w-full overflow-hidden bg-black text-white flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
@@ -53,22 +52,20 @@ export default function ContactPage() {
             Get In <span className="text-[#1092CF]">Touch</span>
           </h1>
           <p className="text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto">
-            Let's discuss how we can power your future with solar energy
+            Let&apos;s discuss how we can power your future with solar energy
           </p>
         </div>
       </section>
 
-      {/* Contact Form & Info */}
       <section className="py-24 px-6 md:px-12">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Information */}
             <div>
               <span className="inline-block border border-neutral-200 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-6">
                 • Contact Information
               </span>
               <h2 className="text-[40px] md:text-[50px] font-bold leading-[1.1] tracking-tighter mb-6">
-                Let's Start A{" "}
+                Let&apos;s Start A{" "}
                 <span className="text-[#1092CF]">Conversation</span>
               </h2>
               <p className="text-neutral-600 text-lg leading-relaxed mb-12">
@@ -77,7 +74,6 @@ export default function ContactPage() {
                 sustainable power.
               </p>
 
-              {/* Contact Cards */}
               <div className="space-y-6">
                 <div className="flex items-start gap-4 p-6 bg-neutral-50 rounded-3xl hover:bg-blue-50 transition-colors">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] flex-shrink-0">
@@ -102,7 +98,7 @@ export default function ContactPage() {
                       info@celestialenergyp k.com
                     </p>
                     <p className="text-neutral-500 text-xs mt-1">
-                      We'll respond within 24 hours
+                      We&apos;ll respond within 24 hours
                     </p>
                   </div>
                 </div>
@@ -140,7 +136,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="bg-neutral-50 p-10 rounded-[50px]">
               <h3 className="text-2xl font-bold mb-6">Send Us A Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -240,7 +235,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
       <section className="h-[500px] bg-neutral-100">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.176493779804!2d74.35787931512275!3d31.522470281364044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191ca28b0e47d1%3A0x39a1b45301e3be5!2sGulberg%20III%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1644304445625!5m2!1sen!2s"
@@ -252,7 +246,6 @@ export default function ContactPage() {
         />
       </section>
 
-      {/* FAQ Section */}
       <section className="py-24 px-6 md:px-12 bg-[#F9F9F9]">
         <div className="max-w-[900px] mx-auto text-center">
           <h2 className="text-[40px] md:text-[50px] font-bold leading-[1.1] tracking-tighter mb-6">
