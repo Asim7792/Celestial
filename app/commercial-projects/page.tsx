@@ -39,34 +39,34 @@ export default function CommercialProjectsPage() {
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-black text-black">
+              <div className="text-3xl md:text-4xl font-black text-white">
                 {commercialProjects.length}+
               </div>
-              <p className="text-sm font-bold text-black/80 uppercase tracking-wider">
+              <p className="text-sm font-bold text-white/80 uppercase tracking-wider">
                 Projects
               </p>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-black text-black">
+              <div className="text-3xl md:text-4xl font-black text-white">
                 80-250kW
               </div>
-              <p className="text-sm font-bold text-black/80 uppercase tracking-wider">
+              <p className="text-sm font-bold text-white/80 uppercase tracking-wider">
                 Capacity Range
               </p>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-black text-black">
+              <div className="text-3xl md:text-4xl font-black text-white">
                 PKR 3.5M+
               </div>
-              <p className="text-sm font-bold text-black/80 uppercase tracking-wider">
+              <p className="text-sm font-bold text-white/80 uppercase tracking-wider">
                 Total Savings
               </p>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-black text-black">
+              <div className="text-3xl md:text-4xl font-black text-white">
                 24/7
               </div>
-              <p className="text-sm font-bold text-black/80 uppercase tracking-wider">
+              <p className="text-sm font-bold text-white/80 uppercase tracking-wider">
                 Support
               </p>
             </div>

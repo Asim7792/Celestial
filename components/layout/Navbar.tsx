@@ -72,7 +72,7 @@ const Navbar = () => {
               <span className="font-medium">+92 300 1234567</span>
             </div>
             <Link href="/contact-us">
-              <button className="px-6 py-3 bg-[#1092CF] text-black font-bold text-sm uppercase tracking-wider rounded-full hover:bg-[#0F82BA] transition-colors">
+              <button className="px-6 py-3 bg-[#1092CF] text-white font-bold text-sm uppercase tracking-wider rounded-full hover:bg-[#0F82BA] transition-colors">
                 Get Quote
               </button>
             </Link>

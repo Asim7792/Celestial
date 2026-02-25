@@ -77,7 +77,7 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4 p-6 bg-neutral-50 rounded-3xl hover:bg-blue-50 transition-colors">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] flex-shrink-0">
-                    <Phone size={20} className="text-black" />
+                    <Phone size={20} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-1">Phone</h4>
@@ -90,7 +90,7 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4 p-6 bg-neutral-50 rounded-3xl hover:bg-blue-50 transition-colors">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] flex-shrink-0">
-                    <Mail size={20} className="text-black" />
+                    <Mail size={20} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-1">Email</h4>
@@ -105,7 +105,7 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4 p-6 bg-neutral-50 rounded-3xl hover:bg-blue-50 transition-colors">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] flex-shrink-0">
-                    <MapPin size={20} className="text-black" />
+                    <MapPin size={20} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-1">
@@ -121,7 +121,7 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4 p-6 bg-neutral-50 rounded-3xl hover:bg-blue-50 transition-colors">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] flex-shrink-0">
-                    <Clock size={20} className="text-black" />
+                    <Clock size={20} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-1">
@@ -224,7 +224,7 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-[#1092CF] text-black font-bold text-sm uppercase tracking-wider rounded-full hover:bg-[#0F82BA] transition-colors"
+                  className="w-full  text-white flex items-center justify-center gap-3 px-8 py-5 bg-[#1092CF] font-bold text-sm uppercase tracking-wider rounded-full hover:bg-[#0F82BA] transition-colors"
                 >
                   <span>Send Message</span>
                   <Send size={18} />
