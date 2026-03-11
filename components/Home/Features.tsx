@@ -27,7 +27,6 @@ const Features = () => {
           SOLAR
         </h2>
       </div>
-
       <div className="relative z-10 max-w-[1400px] mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
@@ -40,7 +39,6 @@ const Features = () => {
               <span className="inline-block border border-neutral-200 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-8">
                 • Since 2021
               </span>
-
               <h2 className="text-[45px] md:text-[65px] font-bold leading-[1.1] tracking-tighter mb-10">
                 Where Spaces Inspire, <br />
                 And{" "}
@@ -49,7 +47,6 @@ const Features = () => {
                 </span>{" "}
                 Comes Alive
               </h2>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 mb-12">
                 {highlights.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
@@ -67,10 +64,9 @@ const Features = () => {
                   </div>
                 ))}
               </div>
-
               <p className="text-neutral-500 text-base leading-relaxed mb-12 max-w-lg">
-                Whether it&apos;s your home, office, or a commercial project, we are
-                always dedicated to bringing your energy vision to life. Our
+                Whether it&apos;s your home, office, or a commercial project, we
+                are always dedicated to bringing your energy vision to life. Our
                 performance metrics speak better than words.
               </p>
 

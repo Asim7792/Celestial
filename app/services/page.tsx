@@ -110,7 +110,6 @@ export default function ServicesPage() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-
         <div className="relative z-10 text-center px-6">
           <nav className="flex items-center justify-center gap-2 text-sm text-neutral-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">
@@ -119,7 +118,6 @@ export default function ServicesPage() {
             <ChevronRight size={14} />
             <span className="text-white font-medium">Services</span>
           </nav>
-
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4">
             Our <span className="text-[#1092CF]">Solar Services</span>
           </h1>
@@ -128,7 +126,6 @@ export default function ServicesPage() {
           </p>
         </div>
       </section>
-
       <section className="py-24 px-6 md:px-12">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
@@ -143,7 +140,6 @@ export default function ServicesPage() {
               end-to-end solar energy services
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => {
               const Icon = service.icon;
@@ -168,12 +164,10 @@ export default function ServicesPage() {
                       </h3>
                     </div>
                   </div>
-
                   <div className="p-8">
                     <p className="text-neutral-600 leading-relaxed mb-6">
                       {service.description}
                     </p>
-
                     <h4 className="text-sm font-bold uppercase tracking-wider text-neutral-900 mb-3">
                       Key Features:
                     </h4>
@@ -188,7 +182,6 @@ export default function ServicesPage() {
                         </li>
                       ))}
                     </ul>
-
                     <Link href="/contact-us">
                       <button className="w-full px-6 py-3 border-2 border-neutral-900 text-neutral-900 font-bold text-sm uppercase tracking-wider rounded-full hover:bg-neutral-900 hover:text-white transition-colors">
                         Learn More
@@ -201,7 +194,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       <section className="py-24 px-6 md:px-12 bg-[#F9F9F9]">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-16">
@@ -210,7 +202,6 @@ export default function ServicesPage() {
               <span className="text-[#1092CF]">Celestial Energy?</span>
             </h2>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
@@ -263,7 +254,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-neutral-900 py-24 px-6 text-white text-center">
         <div className="max-w-[900px] mx-auto">
           <h2 className="text-[40px] md:text-[55px] font-bold leading-[1.1] tracking-tighter mb-6">

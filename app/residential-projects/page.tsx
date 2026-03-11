@@ -16,7 +16,6 @@ export default function ResidentialProjectsPage() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-
         <div className="relative z-10 text-center px-6">
           <nav className="flex items-center justify-center gap-2 text-sm text-neutral-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">
@@ -34,7 +33,6 @@ export default function ResidentialProjectsPage() {
           </p>
         </div>
       </section>
-
       <section className="bg-[#1092CF] py-8 px-6">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -73,7 +71,6 @@ export default function ResidentialProjectsPage() {
           </div>
         </div>
       </section>
-
       <section className="py-24 px-6 md:px-12">
         <div className="max-w-[1400px] mx-auto">
           <div className="mb-16 text-center">
@@ -90,7 +87,6 @@ export default function ResidentialProjectsPage() {
               independence.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {residentialProjects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
@@ -98,7 +94,6 @@ export default function ResidentialProjectsPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-neutral-900 py-24 px-6 text-white text-center">
         <div className="max-w-[900px] mx-auto">
           <h2 className="text-[40px] md:text-[55px] font-bold leading-[1.1] tracking-tighter mb-6">

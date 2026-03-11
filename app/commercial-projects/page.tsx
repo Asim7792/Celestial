@@ -36,7 +36,7 @@ export default function CommercialProjectsPage() {
       </section>
 
       <section className="bg-[#1092CF] py-8 px-6">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-350 mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-black text-white">
@@ -75,7 +75,7 @@ export default function CommercialProjectsPage() {
       </section>
 
       <section className="py-24 px-6 md:px-12">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-350 mx-auto">
           <div className="mb-16 text-center">
             <span className="inline-block border border-neutral-200 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-neutral-400 mb-6">
               • Our Commercial Portfolio
@@ -99,7 +99,7 @@ export default function CommercialProjectsPage() {
       </section>
 
       <section className="bg-[#F9F9F9] py-24 px-6">
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-350 mx-auto">
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Industries We Serve
           </h3>
@@ -126,7 +126,7 @@ export default function CommercialProjectsPage() {
       </section>
 
       <section className="bg-neutral-900 py-24 px-6 text-white text-center">
-        <div className="max-w-[900px] mx-auto">
+        <div className="max-w-225 mx-auto">
           <h2 className="text-[40px] md:text-[55px] font-bold leading-[1.1] tracking-tighter mb-6">
             Scale Your Business With{" "}
             <span className="text-[#1092CF]">Solar Energy</span>
