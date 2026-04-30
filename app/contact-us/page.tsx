@@ -14,6 +14,7 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form Data Extracted:", formData);
     alert("Thank you for your inquiry! We will get back to you soon.");
     setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
   };
@@ -80,7 +81,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-1">Phone</h4>
-                    <p className="text-neutral-600 text-sm">+92 300 1234567</p>
+                    <p className="text-neutral-600 text-sm">0330 0358005</p>
                     <p className="text-neutral-500 text-xs mt-1">
                       Mon - Sat: 9:00 AM - 6:00 PM
                     </p>
@@ -94,7 +95,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-bold text-neutral-900 mb-1">Email</h4>
                     <p className="text-neutral-600 text-sm">
-                      info@celestialenergyp k.com
+                      celestialenergysmm08@gmail.com
                     </p>
                     <p className="text-neutral-500 text-xs mt-1">
                       We&apos;ll respond within 24 hours
@@ -111,9 +112,9 @@ export default function ContactPage() {
                       Office Location
                     </h4>
                     <p className="text-neutral-600 text-sm">
-                      Office# 123, Main Boulevard,
+                      Address Plaza no 30, down town
                       <br />
-                      Gulberg III, Lahore, Pakistan
+                      opposite to lignum tower dha 2 islamabad
                     </p>
                   </div>
                 </div>
@@ -179,7 +180,7 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-6 py-4 rounded-2xl border border-neutral-200 focus:border-[#1092CF] focus:ring-2 focus:ring-[#1092CF]/20 outline-none transition-all"
-                      placeholder="+92 300 1234567"
+                      placeholder="0330 0358005"
                     />
                   </div>
                 </div>

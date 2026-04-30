@@ -23,7 +23,7 @@ const CompanyIntro = () => {
 
             <h2 className="text-[40px] md:text-[55px] font-bold leading-[1.1] tracking-tighter mb-8">
               Here&apos;s What Makes{" "}
-              <span className="text-[#1092CF] font-medium">Warm Solar</span>{" "}
+              <span className="text-[#1092CF] font-medium">Celestial Energy</span>{" "}
               Power For{" "}
               <span className="text-[#1092CF] font-medium">Pakistan</span>
             </h2>
