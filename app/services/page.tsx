@@ -41,20 +41,7 @@ export default function ServicesPage() {
       image:
         "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070",
     },
-    {
-      icon: Shield,
-      title: "Net Metering Solutions",
-      description:
-        "Complete net metering setup with DISCO approvals. Sell excess electricity back to the grid and reduce bills to zero.",
-      features: [
-        "LESCO/FESCO/IESCO Approvals",
-        "Documentation Support",
-        "Technical Compliance",
-        "Meter Installation",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1509391366360-fe5bb65831bb?q=80&w=2070",
-    },
+
     {
       icon: Battery,
       title: "Battery Storage Systems",

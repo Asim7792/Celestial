@@ -10,6 +10,7 @@ import {
   Linkedin,
   Twitter,
 } from "lucide-react";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -18,9 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF]">
-                <Sun className="text-black" size={24} />
-              </div>
+              <Image src="/Celestial_Energy_Logo__footer.png" alt="celestial" width={100} height={50} />
               <div>
                 <h2 className="text-lg font-black tracking-tight">
                   Celestial Energy
@@ -130,9 +129,7 @@ const Footer = () => {
               <li className="text-sm text-neutral-400">
                 Commercial Installations
               </li>
-              <li className="text-sm text-neutral-400">
-                Net Metering Solutions
-              </li>
+
               <li className="text-sm text-neutral-400">
                 Battery Storage Systems
               </li>
@@ -154,21 +151,21 @@ const Footer = () => {
                   className="text-[#1092CF] mt-0.5 flex-shrink-0"
                 />
                 <span className="text-sm text-neutral-400">
-                  Office# 123, Main Boulevard,
+                  Address Plaza no 30,Giga Down Town
                   <br />
-                  Gulberg III, Lahore, Pakistan
+                  Opposite to Lignum Tower, DHA 2, Islamabad
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-[#1092CF] flex-shrink-0" />
                 <span className="text-sm text-neutral-400">
-                  +92 300 1234567
+                  0330 0358005
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-[#1092CF] flex-shrink-0" />
                 <span className="text-sm text-neutral-400">
-                  info@celestialenergyp k.com
+                  celestialenergysmm08@gmail.com
                 </span>
               </li>
             </ul>
