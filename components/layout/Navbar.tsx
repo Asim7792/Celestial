@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Phone, Sun } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,7 @@ const Navbar = () => {
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1092CF] group-hover:bg-[#0F82BA] transition-colors">
-              <Sun className="text-black" size={24} />
-            </div>
+            <Image src="/Celestial_energy_logo.png" alt="celestial" width={70} height={50} />
             <div>
               <h1 className="text-xl font-black tracking-tight text-neutral-900 leading-tight">
                 Celestial Energy
@@ -69,7 +68,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-6">
             <div className="flex items-center gap-2 text-sm text-neutral-600">
               <Phone size={16} className="text-[#1092CF]" />
-              <span className="font-medium">+92 300 1234567</span>
+              <span className="font-medium">0330 0358005</span>
             </div>
             <Link href="/contact-us">
               <button className="px-6 py-3 bg-[#1092CF] text-white font-bold text-sm uppercase tracking-wider rounded-full hover:bg-[#0F82BA] transition-colors">

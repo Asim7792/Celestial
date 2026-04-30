@@ -20,7 +20,7 @@ const SavingsCalculator = () => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-24 px-6 md:px-12 text-white overflow-hidden">
+    <section id="calculator" className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 py-24 px-6 md:px-12 text-white overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 right-10 text-[300px] font-black">
           ₨

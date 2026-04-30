@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -32,121 +32,121 @@ const testimonials = [
 
 const AboutTestimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsToShow, setCardsToShow] = useState(1);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) setCardsToShow(3);
+      else if (window.innerWidth >= 768) setCardsToShow(2);
+      else setCardsToShow(1);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const next = () => {
+    if (currentIndex < testimonials.length - cardsToShow) {
+      setCurrentIndex((prev) => prev + 1);
+    }
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
+  const prev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prev) => prev - 1);
+    }
   };
-
-  const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="bg-[#F9F9F9] py-24 px-6 md:px-12">
-      <div className="max-w-[1400px] mx-auto">
-        <div className="text-center mb-16">
-          <span className="inline-block border border-neutral-300 px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest text-neutral-500 mb-6">
-            • Our Clients Say
-          </span>
-          <h2 className="text-[40px] md:text-[55px] font-bold leading-[1.1] tracking-tighter">
-            Here&apos;s What{" "}
-            <span className="text-[#1092CF] font-medium">Warm Words</span>{" "}
-            <br />
-            Our Clients Say
-          </h2>
-        </div>
+    <section className="bg-white py-24 px-6 md:px-12 overflow-hidden">
+      <div className="max-w-[1400px] mx-auto text-center mb-20">
+        <span className="text-[#1092CF] font-black text-sm uppercase tracking-[0.3em] mb-4 block">
+          TESTIMONIALS
+        </span>
+        <h2 className="text-4xl md:text-5xl font-black text-neutral-900 tracking-tighter">
+          What Our Clients Say
+        </h2>
+        <div className="w-20 h-1.5 bg-[#1092CF] mx-auto mt-6 rounded-full" />
+      </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-[1400px] mx-auto">
+        <div className="relative overflow-hidden pt-20">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="text-center lg:text-left"
+            className="flex gap-8"
+            animate={{ x: `calc(-${currentIndex * (100 / cardsToShow)}% - ${currentIndex * (32 / cardsToShow)}px)` }}
+            transition={{ type: "spring", stiffness: 200, damping: 25 }}
           >
-            <div className="inline-block bg-white rounded-[40px] p-12 shadow-xl border border-neutral-100">
-              <div className="text-8xl font-black tracking-tighter text-neutral-900 mb-4">
-                4.95
-              </div>
-              <div className="flex justify-center lg:justify-start gap-1 mb-3">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    size={20}
-                    className="fill-[#1092CF] text-[#1092CF]"
-                  />
-                ))}
-              </div>
-              <p className="text-sm text-neutral-500 font-medium">
-                Based on{" "}
-                <span className="font-bold text-neutral-900">500+ reviews</span>
-              </p>
-            </div>
-          </motion.div>
-
-          <div className="relative">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentTestimonial.id}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-[40px] p-10 shadow-xl border border-neutral-100"
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="flex-shrink-0"
+                style={{ width: `calc(${100 / cardsToShow}% - ${(32 * (cardsToShow - 1)) / cardsToShow}px)` }}
               >
-                <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-8 italic">
-                  {currentTestimonial.text}
-                </p>
-
-                <div className="flex items-center gap-4">
-                  <img
-                    src={currentTestimonial.image}
-                    alt={currentTestimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-4 border-neutral-100"
-                  />
-                  <div>
-                    <h4 className="font-bold text-neutral-900">
-                      {currentTestimonial.name}
-                    </h4>
-                    <p className="text-sm text-neutral-500">
-                      {currentTestimonial.location}
-                    </p>
+                <div className="relative group pt-16 h-full">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20">
+                    <div className="relative w-32 h-32 rounded-full border-[6px] border-white shadow-2xl overflow-hidden bg-white">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
                   </div>
 
-                  <div className="ml-auto flex gap-1">
-                    {Array.from({ length: currentTestimonial.rating }).map(
-                      (_, i) => (
-                        <Star
-                          key={i}
-                          size={16}
-                          className="fill-[#1092CF] text-[#1092CF]"
-                        />
-                      ),
-                    )}
+                  <div className="relative bg-neutral-50 rounded-[40px] p-10 pt-20 shadow-xl border border-transparent group-hover:bg-white group-hover:border-[#1092CF]/30 transition-all duration-300 flex flex-col items-center h-full">
+                    <div className="mb-6 flex gap-1">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <Star key={star} size={16} className="fill-[#1092CF] text-[#1092CF]" />
+                      ))}
+                    </div>
+
+                    <div className="relative mb-8">
+                      <Quote className="absolute -top-4 -left-6 text-[#1092CF]/10" size={40} />
+                      <p className="text-neutral-600 text-center leading-relaxed text-lg italic relative z-10">
+                        &quot;{testimonial.text}&quot;
+                      </p>
+                      <Quote className="absolute -bottom-4 -right-6 text-[#1092CF]/10 rotate-180" size={40} />
+                    </div>
+
+                    <div className="mt-auto w-full text-center">
+                      <div className="h-px w-full bg-neutral-200 mb-8" />
+                      <h4 className="text-base font-black text-neutral-900 uppercase tracking-wider mb-1">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-[#1092CF] text-xs font-bold uppercase tracking-widest">
+                        {testimonial.location}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            <div className="flex justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-300 bg-white hover:bg-neutral-900 hover:text-white transition-all"
-              >
-                <ChevronLeft size={20} />
-              </button>
-              <button
-                onClick={nextTestimonial}
-                className="flex h-12 w-12 items-center justify-center rounded-full border border-neutral-300 bg-white hover:bg-neutral-900 hover:text-white transition-all"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
-          </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
+
+        <button
+          onClick={prev}
+          className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-2xl transition-all border border-neutral-100 group ${currentIndex === 0 ? "opacity-0 invisible" : "hover:bg-[#1092CF] hover:text-white"}`}
+        >
+          <ChevronLeft size={24} className={currentIndex === 0 ? "text-neutral-200" : "text-[#1092CF] group-hover:text-white"} />
+        </button>
+
+        <button
+          onClick={next}
+          className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-2xl transition-all border border-neutral-100 group ${currentIndex >= testimonials.length - cardsToShow ? "opacity-0 invisible" : "hover:bg-[#1092CF] hover:text-white"}`}
+        >
+          <ChevronRight size={24} className={currentIndex >= testimonials.length - cardsToShow ? "text-neutral-200" : "text-[#1092CF] group-hover:text-white"} />
+        </button>
+      </div>
+
+      <div className="flex justify-center gap-3 mt-16">
+        {Array.from({ length: testimonials.length - cardsToShow + 1 }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`h-2.5 rounded-full transition-all duration-500 ${index === currentIndex ? "w-12 bg-[#1092CF]" : "w-2.5 bg-neutral-200 hover:bg-neutral-300"}`}
+          />
+        ))}
       </div>
     </section>
   );

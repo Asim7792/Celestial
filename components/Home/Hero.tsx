@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -15,7 +16,7 @@ const Hero = () => {
       <div className="relative z-10 mx-auto flex min-h-screen max-w-[1400px] flex-col justify-end px-6 pb-20 md:px-12">
         <div className="relative grid grid-cols-1 gap-4 lg:grid-cols-12">
           <div className="lg:col-span-9">
-            <h1 className="flex flex-col text-[60px] font-bold leading-[0.9] tracking-tighter md:text-[100px]">
+            <h1 className="flex flex-col text-[50px] font-bold leading-[0.9] tracking-tighter md:text-[100px]">
               <span>Find Your</span>
               <span className="text-neutral-200">Powered</span>
               <span className="flex items-center gap-6">Solar Energy</span>
@@ -28,22 +29,24 @@ const Hero = () => {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row items-start gap-4">
-              <button
-                className="group flex items-center gap-4 rounded-full border-2 px-10 py-3 transition-all hover:scale-105"
-                style={{ borderColor: "#1092CF", backgroundColor: "#1092CF" }}
-              >
-                <span className="text-base font-bold uppercase tracking-wider text-white">
-                  Calculate Your Savings - Free
-                </span>
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black">
-                  <ArrowUpRight size={16} />
-                </span>
-              </button>
+              <Link href="#calculator" className="w-full sm:w-auto">
+                <button
+                  className="group flex items-center gap-4 rounded-full border-2 px-10 py-3 transition-all hover:scale-105 w-full"
+                  style={{ borderColor: "#1092CF", backgroundColor: "#1092CF" }}
+                >
+                  <span className="text-base font-bold uppercase tracking-wider text-white">
+                    Calculate Your Savings - Free
+                  </span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-black">
+                    <ArrowUpRight size={16} />
+                  </span>
+                </button>
+              </Link>
 
-              <a href="tel:+923001234567">
-                <button className="flex items-center gap-3 rounded-full border border-neutral-700 px-8 py-4 hover:bg-white/10 transition-all">
+              <a href="tel:03300358005" className="w-full sm:w-auto">
+                <button className="flex items-center gap-3 rounded-full border border-neutral-700 px-8 py-4 hover:bg-white/10 transition-all w-full">
                   <span className="text-sm font-semibold uppercase tracking-wider">
-                    Call: +92 300 1234567
+                    Call: 0330 0358005
                   </span>
                 </button>
               </a>

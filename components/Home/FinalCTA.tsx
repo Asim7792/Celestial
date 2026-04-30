@@ -45,7 +45,7 @@ const FinalCTA = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <a href="tel:+923001234567" className="group">
+              <a href="tel:03300358005" className="group">
                 <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border-2 border-white/20 hover:border-[#1092CF] hover:bg-white/20 transition-all">
                   <Phone
                     className="mx-auto mb-4 group-hover:scale-110 transition-transform"
@@ -53,13 +53,13 @@ const FinalCTA = () => {
                     style={{ color: "#1092CF" }}
                   />
                   <h4 className="font-bold text-lg mb-2">Call Us Now</h4>
-                  <p className="text-2xl font-black mb-2">+92 300 1234567</p>
+                  <p className="text-2xl font-black mb-2">0330 0358005</p>
                   <p className="text-sm text-white/60">Mon-Sat: 9 AM - 6 PM</p>
                 </div>
               </a>
 
               <a
-                href="https://wa.me/923001234567"
+                href="https://wa.me/923300358005"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group"
@@ -76,7 +76,7 @@ const FinalCTA = () => {
                 </div>
               </a>
 
-              <a href="mailto:info@celestialenergyp k.com" className="group">
+              <a href="mailto:celestialenergysmm08@gmail.com" className="group">
                 <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border-2 border-white/20 hover:border-[#1092CF] hover:bg-white/20 transition-all">
                   <Mail
                     className="mx-auto mb-4 group-hover:scale-110 transition-transform"
@@ -85,7 +85,7 @@ const FinalCTA = () => {
                   />
                   <h4 className="font-bold text-lg mb-2">Email Us</h4>
                   <p className="text-lg font-bold mb-2">
-                    info@celestialenergy.pk
+                    celestialenergysmm08@gmail.com
                   </p>
                   <p className="text-sm text-white/60">
                     Response within 24 hours
